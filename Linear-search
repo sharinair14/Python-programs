@@ -1,0 +1,36 @@
+# Linear search example
+
+pos = -1
+
+def search(list,n):
+
+# using while loop
+
+    i=0
+    while i<len(list):
+        if list[i] == n:
+            globals()['pos']= i
+            return True
+        i=i+1
+    return False
+
+# using for loop
+
+def search(list,n):
+
+
+    for i in range(len(list)):
+        if list[i] == n:
+            globals()['pos']= i
+            return True
+
+    return False
+
+
+list=[4,7,3,10,23,21]
+n=3
+
+if search(list,n):
+    print("Found at ",pos+1)
+else:
+    print("Not Found")
